@@ -7,6 +7,8 @@ TagManager:
   - Flashlight
   - FlashlightLight
   - FlashlightText
+  - EndOfGameCamera
+  - EndText
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class Keyboard : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (flashlight.GetComponent<FlashlightTrigger>().EnteredTrigger)
+            if (flashlight.GetComponent<FlashlightTrigger>().enteredTrigger)
             {
                 pointlight.GetComponent<Light>().enabled = !pointlight.GetComponent<Light>().enabled;
             }

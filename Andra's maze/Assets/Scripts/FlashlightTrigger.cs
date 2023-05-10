@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FlashlightTrigger : MonoBehaviour
 {
-    public bool EnteredTrigger;
+    public bool enteredTrigger;
     private GameObject flashlight;
     private GameObject flashlightText;
 
@@ -19,7 +19,7 @@ public class FlashlightTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            EnteredTrigger = true;
+            enteredTrigger = true;
             StartCoroutine("ShowFlashlightMessage");
             flashlight.GetComponent<MeshRenderer>().enabled = false;
         }
