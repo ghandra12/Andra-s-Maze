@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Keyboard : MonoBehaviour
 {
@@ -21,5 +22,10 @@ public class Keyboard : MonoBehaviour
                 pointlight.GetComponent<Light>().enabled = !pointlight.GetComponent<Light>().enabled;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+
      }
 }

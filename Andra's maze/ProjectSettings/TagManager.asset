@@ -9,6 +9,10 @@ TagManager:
   - FlashlightText
   - EndOfGameCamera
   - EndText
+  - PlayButton
+  - MainMenu
+  - SettingsMenu
+  - PlayerCube
   layers:
   - Default
   - TransparentFX
