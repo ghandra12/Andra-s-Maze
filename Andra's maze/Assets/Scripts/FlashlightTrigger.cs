@@ -17,7 +17,7 @@ public class FlashlightTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "PlayerCube")
+        if (other.tag == "PlayerCube" && !enteredTrigger)
         {
             enteredTrigger = true;
             StartCoroutine("ShowFlashlightMessage");

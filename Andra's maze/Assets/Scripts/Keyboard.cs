@@ -24,8 +24,9 @@ public class Keyboard : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
-     }
+    }
 }
