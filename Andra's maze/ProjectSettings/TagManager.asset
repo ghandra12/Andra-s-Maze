@@ -16,6 +16,9 @@ TagManager:
   - key
   - DoorOpen
   - FirstDoor
+  - SecondDoor
+  - KeypadScreen
+  - PressEToUse
   layers:
   - Default
   - TransparentFX
