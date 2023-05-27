@@ -19,6 +19,7 @@ TagManager:
   - SecondDoor
   - KeypadScreen
   - PressEToUse
+  - Ghost
   layers:
   - Default
   - TransparentFX
