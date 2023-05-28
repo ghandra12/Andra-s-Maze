@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class KeyPad : MonoBehaviour
 {
-    [SerializeField] private TMP_Text ans;
+    [SerializeField] public TMP_Text ans;
     private GameObject secondDoor;
     private string correctPincode = "1212";
-    private bool doorOpened = false;
+    public bool doorOpened = false;
 
     public void Start()
     {
@@ -27,9 +27,13 @@ public class KeyPad : MonoBehaviour
     {
         if (ans.text == correctPincode && !doorOpened)
         {
+            ans.text = "OK";
             secondDoor.transform.position = new Vector3(294.78f, 0.87f, -334.1f);
             secondDoor.transform.Rotate(0, -100f, 0.0f, Space.Self);
             doorOpened = true;
+        } else
+        {
+            ans.text = "NO";
         }
     }
 }

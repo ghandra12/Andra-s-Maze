@@ -7,6 +7,7 @@ public class KeypadTrigger : MonoBehaviour
 {
     private GameObject keypadScreen;
     private GameObject pressEToUseText;
+    [SerializeField] private KeyPad keypad;
     private bool canDisplayKeypad;
     void Start()
     {
@@ -17,10 +18,11 @@ public class KeypadTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canDisplayKeypad)
+        if (Input.GetKeyDown(KeyCode.E) && canDisplayKeypad && !keypad.doorOpened)
         {
             if (keypadScreen.activeSelf)
             {
+                keypad.ans.text = string.Empty;
                 Cursor.lockState = CursorLockMode.Locked;
                 keypadScreen.SetActive(false);
             }
@@ -40,7 +42,7 @@ public class KeypadTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !keypad.doorOpened)
         {
             canDisplayKeypad = true;
             StartCoroutine("ShowPressEToUse");
