@@ -6,10 +6,32 @@ public class GhostScript : MonoBehaviour
 {
     [SerializeField] private GameObject endTarget;
     [SerializeField] private GameObject startTarget;
+    [SerializeField] private GameObject ghostReturnPosition1;
+    [SerializeField] private GameObject ghostReturnPosition2;
+
+    private GameObject player;
+
+    public bool returnToStart = true;
     private bool moveForward = true;
     public float movementSpeed = 1.5f;
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            if (returnToStart)
+            {
+                player.transform.position = ghostReturnPosition1.transform.position;
+            }
+            else
+            {
+                player.transform.position = ghostReturnPosition2.transform.position;
+            }
+        }
     }
 
     void Update()
