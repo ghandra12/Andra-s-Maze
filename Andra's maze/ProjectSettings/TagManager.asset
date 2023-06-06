@@ -20,6 +20,8 @@ TagManager:
   - KeypadScreen
   - PressEToUse
   - Ghost
+  - PuzzleScreen
+  - ThirdDoor
   layers:
   - Default
   - TransparentFX
