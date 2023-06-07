@@ -22,6 +22,12 @@ TagManager:
   - Ghost
   - PuzzleScreen
   - ThirdDoor
+  - FourthDoor
+  - key2
+  - key3
+  - RunText
+  - GameOverText
+  - FifthDoor
   layers:
   - Default
   - TransparentFX
