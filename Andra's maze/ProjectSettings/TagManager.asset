@@ -28,6 +28,7 @@ TagManager:
   - RunText
   - GameOverText
   - FifthDoor
+  - PlayerName
   layers:
   - Default
   - TransparentFX
